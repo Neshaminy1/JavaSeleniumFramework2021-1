@@ -1,0 +1,7 @@
+package gov.acms.acmsproject.pagelibrary;
+
+import gov.acms.acmsproject.base.BasePage;
+
+public class PortalLoginPage extends BasePage{
+
+}

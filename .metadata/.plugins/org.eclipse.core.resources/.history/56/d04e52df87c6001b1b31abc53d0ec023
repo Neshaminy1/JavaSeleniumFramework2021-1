@@ -1,0 +1,21 @@
+package gov.acms.acmsproject.sample;
+
+import org.testng.annotations.Test;
+
+import gov.acms.acmsproject.base.TestBase;
+import gov.acms.acmsproject.pagelibrary.portal.PortalPage;
+
+public class SamplePageObject extends TestBase{
+	
+	@Test
+	public void PageObject() {
+		
+		PortalPage  portalpage  = new PortalPage (driver);
+    	//ExtentReportNG extend = new ExtentReportNG();
+    	
+    	portalpage.navigateURL("https://ca2-portal-core-dev.powerappsportals.us/");
+    	portalpage.SignInHomePage();
+    	portalpage.LoginToPortal(PropertyReader.readItem("username"), PropertyReader.readItem("password"));
+	}
+
+}

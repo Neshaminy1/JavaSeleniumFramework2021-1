@@ -1,0 +1,5 @@
+package gov.acms.acmsproject.sample;
+
+public class SamplePageObject {
+
+}

@@ -1,0 +1,42 @@
+package gov.acms.acmsproject.sample;
+
+import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.Test;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+
+import gov.acms.acmsproject.base.BasePage;
+import gov.acms.acmsproject.base.TestBase;
+import gov.acms.acmsproject.pagelibrary.portal.PortalPage;
+import gov.acms.acmsproject.utils.PropertyReader;
+import jdk.internal.jline.internal.Log;
+
+public class SamplePageObject extends TestBase {
+
+	Logger log = Logger.getLogger(SamplePageObject.class);
+	static ExtentReports extent;
+	ExtentSparkReporter sparkReporter;
+	ExtentTest test;
+	
+	@Test
+	public void Setup() throws InterruptedException {
+		
+    	PortalPage  portalpage  = new PortalPage (driver);
+    	//ExtentReportNG extend = new ExtentReportNG();
+    	
+    	portalpage.navigateURL("https://ca2-portal-core-dev.powerappsportals.us/");
+    	portalpage.SignInHomePage();
+    	portalpage.LoginToPortal(PropertyReader.readItem("username"), PropertyReader.readItem("password"));
+    	
+    	
+		
+	}
+	
+	
+}

@@ -1,0 +1,14 @@
+package gov.acms.acmsproject.sample;
+
+import org.testng.annotations.Test;
+
+import gov.acms.acmsproject.base.TestBase;
+
+public class SamplePageObject extends TestBase{
+	
+	@Test
+	public void PageObject() {
+		
+	}
+
+}

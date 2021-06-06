@@ -1,0 +1,16 @@
+package gov.acms.acmsproject.pagelibrary.portal;
+
+import org.openqa.selenium.WebDriver;
+
+import gov.acms.acmsproject.base.BasePage;
+
+public class PortalLoginPage extends BasePage{
+
+	public PortalLoginPage(WebDriver driver) {
+		super(driver);
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+
+}

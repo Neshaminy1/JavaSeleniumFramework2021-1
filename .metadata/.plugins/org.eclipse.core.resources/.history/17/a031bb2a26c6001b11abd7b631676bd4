@@ -1,0 +1,18 @@
+package gov.acms.acmsproject.pagelibrary.portal;
+
+import org.openqa.selenium.WebDriver;
+
+import gov.acms.acmsproject.base.BasePage;
+
+public class PortalLoginPage extends BasePage{
+
+
+	WebDriver driver;
+
+    public PortalPage (WebDriver driver){
+        super(driver);
+        this.driver = driver;
+    }
+	
+
+}

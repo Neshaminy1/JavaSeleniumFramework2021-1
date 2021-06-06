@@ -1,0 +1,10 @@
+package gov.acms.acmsproject.utils;
+
+import java.util.Properties;
+
+public class PropertyReader {
+	
+	public static Properties properties;
+	
+
+}

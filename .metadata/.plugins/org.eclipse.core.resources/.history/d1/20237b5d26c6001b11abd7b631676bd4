@@ -1,0 +1,304 @@
+package gov.acms.acmsproject.pagelibrary.portal;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+import gov.acms.acmsproject.base.BasePage;
+
+public class PortalPage extends BasePage{
+
+
+	WebDriver driver;
+
+    public PortalPage (WebDriver driver){
+        super(driver);
+        this.driver = driver;
+    }
+    
+  //******************** Elements Locator for Portal ********************
+    
+  	//Click signIn
+      By SignIn = By.xpath("//*[@id='navbar']/div[1]/ul/li[3]/a");
+  	
+  	//Enter username	
+      By userName = By.xpath("//*[@id='loginForm:loginName']");
+    
+  	//Enter password
+      By passWord = By.xpath("//*[@id='loginForm:password']");
+
+  	//Click Login
+      By clickSignIn = By.xpath("(//*[text() ='Login'])[2]");
+  	
+  	/*
+  	 * //Click Create Petition for Review
+  	 * 
+  	 * @FindBy(how = How.XPATH, using =
+  	 * "//*[text() ='Create a Petition for Review']") public WebElement
+  	 * createaPetitionforReview ;
+  	 * 
+  	 * //Click Next
+  	 * 
+  	 * @FindBy(how = How.XPATH, using = "//*[@id='NextButton']") public WebElement
+  	 * clickNext;
+  	 * 
+  	 * //Click addPetitioner
+  	 * 
+  	 * @FindBy(how = How.XPATH, using = "//*[text() ='Add Petitioner']") public
+  	 * WebElement addPetitioner;
+  	 * 
+  	 * //Enter ANumber
+  	 * 
+  	 * @FindBy(how = How.XPATH, using = "//*[@id='acms_anumber']") public WebElement
+  	 * aNumber;
+  	 * 
+  	 * //Enter firstName
+  	 * 
+  	 * @FindBy(how = How.XPATH, using = "//*[@id='acms_firstname']") public
+  	 * WebElement firstName;
+  	 * 
+  	 * //Enter lastName
+  	 * 
+  	 * @FindBy(how = How.XPATH, using = "//*[@id='acms_lastname']") public
+  	 * WebElement lastName;
+  	 * 
+  	 * //Click clickSubmit
+  	 * 
+  	 * @FindBy(how = How.XPATH, using = "//*[@id='InsertButton']") public WebElement
+  	 * clickSubmit;
+  	 * 
+  	 * //Click attachDocument
+  	 * 
+  	 * @FindBy(how = How.XPATH, using = "//*[text() ='Attach Document']") public
+  	 * WebElement attachDocument;
+  	 * 
+  	 * //Click attachDocument
+  	 * 
+  	 * @FindBy(how = How.XPATH, using = "//*[text() ='Attach Documents']") public
+  	 * WebElement attachDocuments;
+  	 * 
+  	 * //Click documentDropdown
+  	 * 
+  	 * @FindBy(how = How.XPATH, using = "//*[@id='acms_filingtype']") public
+  	 * WebElement documentDropdown ;
+  	 * 
+  	 * //Click chooseFile
+  	 * 
+  	 * @FindBy(how = How.XPATH, using = "//*[@id='AttachFile']") public WebElement
+  	 * chooseFile;
+  	 * 
+  	 * //Click submittoCourtWithoutFeePayment
+  	 * 
+  	 * @FindBy(how = How.XPATH, using =
+  	 * "//*[text() ='Submit to Court Without Fee Payment']") public WebElement
+  	 * submittoCourtWithoutFeePayment ;
+  	 * 
+  	 * //Click clickSubmitNewFiling
+  	 * 
+  	 * @FindBy(how = How.XPATH, using = "//*[@id='NextButton']") public WebElement
+  	 * clickSubmitNewFiling;
+  	 * 
+  	 * //Click clickYes
+  	 * 
+  	 * @FindBy(how = How.XPATH, using = "//*[text() ='Yes']") public WebElement
+  	 * clickYes;
+  	 * 
+  	 * //Click getANumber
+  	 * 
+  	 * @FindBy(how = How.XPATH, using =
+  	 * "/html/body/section[2]/div/div[3]/div/div[2]/div/div[1]/table/tbody/tr[1]/td[2]")
+  	 * public WebElement getANumber ;
+  	 * 
+  	 * //Click testPortalAccount
+  	 * 
+  	 * @FindBy(how = How.XPATH, using = "//*[@id='navbar']/div[1]/ul/li[3]/a")
+  	 * public WebElement testPortalAccount ;
+  	 * 
+  	 * //Click clickSignOut
+  	 * 
+  	 * @FindBy(how = How.XPATH, using =
+  	 * "//*[@id='navbar']/div[1]/ul/li[3]/ul/li[2]/a") public WebElement
+  	 * clickSignOut ;
+  	 * 
+  	 * //Click firstCaseNumberMyOpenCase
+  	 * 
+  	 * @FindBy(how = How.XPATH, using =
+  	 * "/html/body/section[2]/div/div[3]/div/div[3]/div/div[2]/table/tbody/tr[1]/td[1]/a")
+  	 * public WebElement firstCaseNumberMyOpenCase ;
+  	 * 
+  	 * //Click clickCreateANewFiling
+  	 * 
+  	 * @FindBy(how = How.XPATH, using = "//*[@id='createNewFilingButton']") public
+  	 * WebElement clickCreateANewFiling;
+  	 * 
+  	 * //Click clickNewFiling
+  	 * 
+  	 * @FindBy(how = How.XPATH, using = "//*[text() =' New Filing']") public
+  	 * WebElement clickNewFiling ;
+  	 * 
+  	 * //Click clickFilingCategory
+  	 * 
+  	 * @FindBy(how = How.XPATH, using =
+  	 * "//*[@id='sectionThree']/fieldset/table/tbody/tr[1]/td[1]/div[2]/div[1]/div[2]/button[2]")
+  	 * public WebElement clickFilingCategory ;
+  	 * 
+  	 * //Click clickMotions
+  	 * 
+  	 * @FindBy(how = How.XPATH, using =
+  	 * "//*[@aria-label='Filing Category Name Motions']") public WebElement
+  	 * clickMotions;
+  	 * 
+  	 * //Click clickSelect
+  	 * 
+  	 * @FindBy(how = How.XPATH, using = "(//*[@aria-label='Select'])[2]") public
+  	 * WebElement clickSelect;
+  	 * 
+  	 * //Click clickSelectFilingType
+  	 * 
+  	 * @FindBy(how = How.XPATH, using = "(//*[@aria-label='Select'])[4]") public
+  	 * WebElement clickSelectFilingType ;
+  	 * 
+  	 * //Click clickFilingType
+  	 * 
+  	 * @FindBy(how = How.XPATH, using =
+  	 * "//*[@id='sectionThree']/fieldset/table/tbody/tr[2]/td[1]/div[2]/div[1]/div[2]/button[2]")
+  	 * public WebElement clickFilingType;
+  	 * 
+  	 * //Click clickMotiontoproceedinformapauperis
+  	 * 
+  	 * @FindBy(how = How.XPATH, using =
+  	 * "//*[@aria-label='Filing Type Name CA9 - Motion to proceed in forma pauperis']"
+  	 * ) public WebElement clickMotiontoproceedinformapauperis ;
+  	 * 
+  	 * //Click getCaseNumber
+  	 * 
+  	 * @FindBy(how = How.XPATH, using =
+  	 * "(//*[@data-attribute='pcx_casenumber'])[1]") public WebElement getCaseNumber
+  	 * ;
+  	 * 
+  	 * //Click clickDocumentURLFromPartyFiling
+  	 * 
+  	 * @FindBy(how = How.XPATH, using = "//*[@data-id='cell-0-7']") public
+  	 * WebElement clickDocumentURLFromPartyFiling ;
+  	 */
+  	
+  	
+  	
+  //************************************************ Page Actions **************************************************
+
+  	public void SignInHomePage() throws InterruptedException{
+  		waitForElementToAppear(SignIn);
+  		click(SignIn);
+  		//waitForElementToAppear(userName);
+  	    presenceOfTheElement(userName);
+  	}
+
+  	
+  	public void LoginToPortal(String UserName, String Password) throws InterruptedException{			
+  		writeText(userName, UserName);
+  		writeText(passWord, Password);
+  		click(clickSignIn);
+  	}
+
+  	/*
+  	 * public void CreateaPetitionForReview() throws InterruptedException{
+  	 * createaPetitionforReview.click(); waitforelement(clickNext, 30); } public
+  	 * void ClickNext() throws InterruptedException{ clickNext.click(); }
+  	 * 
+  	 * public void AddPetitioner() throws InterruptedException{
+  	 * addPetitioner.click(); Thread.sleep(5000); }
+  	 * 
+  	 * public void EnterANumber (String anumber) throws InterruptedException{
+  	 * aNumber.sendKeys(anumber); }
+  	 * 
+  	 * public void EnterFirstName (String firstname) throws InterruptedException{
+  	 * firstName.sendKeys(firstname); } public void EnterLastName (String lastname)
+  	 * throws InterruptedException{ lastName.sendKeys(lastname); } public void
+  	 * ClickSubmit() throws InterruptedException{ clickSubmit.click();
+  	 * Thread.sleep(5000); }
+  	 * 
+  	 * public void AttachDocument() throws InterruptedException{
+  	 * attachDocument.click(); Thread.sleep(4000); }
+  	 * 
+  	 * public void AttachDocuments() throws InterruptedException{
+  	 * attachDocuments.click(); Thread.sleep(4000); }
+  	 * 
+  	 * public void ChooseFile() throws InterruptedException{ chooseFile.click();
+  	 * Thread.sleep(2000); } public void SubmittoCourtWithoutFeePayment() throws
+  	 * InterruptedException{ submittoCourtWithoutFeePayment.click();
+  	 * Thread.sleep(1000); }
+  	 * 
+  	 * public void ClickSubmitNewFiling () throws InterruptedException{
+  	 * clickSubmitNewFiling .click(); Thread.sleep(1000); }
+  	 * 
+  	 * public void ClickYes () throws InterruptedException{ clickYes .click();
+  	 * Thread.sleep(1000); }
+  	 * 
+  	 * public void GetANumber () throws InterruptedException{ getANumber .click();
+  	 * Thread.sleep(1000); } public void TestPortalAccount () throws
+  	 * InterruptedException{ testPortalAccount .click(); Thread.sleep(1000); }
+  	 * 
+  	 * public void ClickSignOut() throws InterruptedException{ clickSignOut.click();
+  	 * Thread.sleep(3000); }
+  	 * 
+  	 * public void FirstCaseNumberMyOpenCase() throws InterruptedException{
+  	 * firstCaseNumberMyOpenCase.click(); Thread.sleep(1000); }
+  	 * 
+  	 * public void ClickCreateANewFiling() throws InterruptedException{
+  	 * clickCreateANewFiling.click(); Thread.sleep(1000); }
+  	 * 
+  	 * public void ClickNewFiling() throws InterruptedException{
+  	 * clickNewFiling.click(); } public void ClickFilingCategory () throws
+  	 * InterruptedException{ clickFilingCategory.click(); } public void ClickMotions
+  	 * () throws InterruptedException{ clickMotions.click(); } public void
+  	 * ClickSelect () throws InterruptedException{ clickSelect.click();
+  	 * Thread.sleep(1000); } public void ClickSelectFilingType() throws
+  	 * InterruptedException{ clickSelectFilingType.click(); Thread.sleep(1000); }
+  	 * public void ClickFilingType () throws InterruptedException{
+  	 * clickFilingType.click(); } public void ClickMotiontoproceedinformapauperis ()
+  	 * throws InterruptedException{ clickMotiontoproceedinformapauperis.click();
+  	 * 
+  	 * } public void GetCaseNumber () throws InterruptedException{
+  	 * getCaseNumber.click(); Thread.sleep(1000); } public void
+  	 * ClickDocumentURLFromPartyFiling () throws InterruptedException{
+  	 * clickDocumentURLFromPartyFiling.click(); Thread.sleep(1000); }
+  	 */
+  	
+  	
+  //*********************************************************************************************
+      public String FirstNameOptions()
+      {
+      	String[] generation = { "Alex", "Alexis", "Andy", "Angel", "Ash", "Ashley", "Bennie", "Bertie", "Beverly", "Blair", "Bobbie", "Brett", "Carol", "Casey", "Charlie", "Cis", "Chris", "Christian", "Clem", "Connie", "Cory" };
+          Random rand = new Random();
+          int index = rand.nextInt(generation.length);
+          String generationType = generation[index];
+          return generationType;
+      }
+      
+      public static String RandomString(int stringLength)
+      {
+          Random ran = new Random();
+          String b = "abcdefghijklmnopqrstuvwxyz";
+          String random = "";
+
+          for (int i = 0; i < stringLength; i++)
+          {
+              int a = ran.nextInt(26);
+              random = random + b.charAt(a);
+          }
+          return random;
+
+      }
+      
+      public static int generateRandomDigits(int n) {
+          int m = (int) Math.pow(10, n - 1);
+          return m + new Random().nextInt(9 * m);
+      }
+           
+  	
+  	
+
+  }
+
+	
+
+}

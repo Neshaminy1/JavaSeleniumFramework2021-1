@@ -1,0 +1,10 @@
+package gov.acms.acmsproject.sample;
+
+public class SamplePageObject {
+	
+	@Test
+	public void PageObject() {
+		
+	}
+
+}

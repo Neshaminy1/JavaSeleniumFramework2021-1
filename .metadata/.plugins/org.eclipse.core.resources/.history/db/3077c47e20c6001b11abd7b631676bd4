@@ -1,0 +1,14 @@
+package gov.acms.acmsproject.utils;
+
+public class DriverManager {
+	
+	Webdriver driver;
+
+	public WebDriver getDriver(){
+		return driver;
+	}
+	
+	
+	
+
+}

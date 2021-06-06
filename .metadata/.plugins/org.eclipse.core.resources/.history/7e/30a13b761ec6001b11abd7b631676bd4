@@ -1,0 +1,8 @@
+package gov.acms.acmsproject.utils;
+
+public class PropertyReader {
+	
+	publiv static Properties properties;
+	
+
+}

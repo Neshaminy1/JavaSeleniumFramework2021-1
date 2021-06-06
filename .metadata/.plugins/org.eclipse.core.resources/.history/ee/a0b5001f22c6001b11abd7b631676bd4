@@ -1,0 +1,9 @@
+package gov.acms.acmsproject.base;
+
+import org.openqa.selenium.remote.service.DriverCommandExecutor;
+
+import gov.acms.acmsproject.utils.DriverManager;
+
+public class TestBase extends DriverManager{
+
+}

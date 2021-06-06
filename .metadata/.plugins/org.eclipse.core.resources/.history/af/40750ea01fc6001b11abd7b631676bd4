@@ -1,0 +1,33 @@
+package gov.acms.acmsproject.utils;
+
+import java.io.IOError;
+import java.io.IOException;
+import java.util.Properties;
+
+public class PropertyReader {
+	
+	//Declare properties variable
+	public static Properties properties;
+
+	//Create a constructor
+	public PropertyReader() {
+		
+	}
+	
+	//Create a method to load the property file	
+	public void loadAllProperties() {
+		
+		//Create instance for Properties
+		properties = new Properties();
+		
+		try{
+			
+		}catch(IOException e) {
+			throw new RuntimeException("Could not read the properties file");
+	    }
+		
+		
+	}
+	
+
+}
