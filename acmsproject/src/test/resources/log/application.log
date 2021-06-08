@@ -1,2 +1,4 @@
 2021-06-08 01:11:56,287 - gov.acms.acmsproject.sample.SampleWebDriveManager -INFO - Successfully Navigated to Google
 2021-06-08 01:11:56,330 - gov.acms.acmsproject.sample.SampleWebDriveManager -INFO - Successfully entered value in google search box
+2021-06-08 10:47:14,949 - gov.acms.acmsproject.sample.SampleWebDriveManager -INFO - Successfully Navigated to Google
+2021-06-08 10:47:14,997 - gov.acms.acmsproject.sample.SampleWebDriveManager -INFO - Successfully entered value in google search box

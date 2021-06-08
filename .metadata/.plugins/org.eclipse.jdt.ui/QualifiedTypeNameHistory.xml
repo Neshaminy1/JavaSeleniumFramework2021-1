@@ -34,4 +34,5 @@
     <fullyQualifiedTypeName name="gov.acms.acmsproject.utils.PropertyReader"/>
     <fullyQualifiedTypeName name="gov.acms.acmsproject.pagelibrary.portal.PortalPage"/>
     <fullyQualifiedTypeName name="gov.acms.acmsproject.utils.ExtentReportNG"/>
+    <fullyQualifiedTypeName name="org.testng.annotations.AfterMethod"/>
 </qualifiedTypeNameHistroy>
