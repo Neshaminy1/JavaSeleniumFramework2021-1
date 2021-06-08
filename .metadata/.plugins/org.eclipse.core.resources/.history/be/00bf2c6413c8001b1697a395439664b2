@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">	
+<suite name="acmsApplications">
+
+	<test name="CreatePetitionforReview">
+		<classes>
+			<class
+				name="acmsproject.portal.CreatePetitionforReview" />
+		</classes>
+	</test>
+	
+ 
+ 	<test name="CreateANewFilingInCourtofAppeals" >
+	  <classes>
+	   	<class 
+	   		name="acmsproject.portal.CreateANewFilingInCourtofAppeals" />
+	  </classes>
+	</test>
+
+	
+ 	 
+</suite>
+

@@ -1,0 +1,26 @@
+<!-- <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">	
+<suite name="acmsApplications">
+
+	<test name="SampleWebDriveManager">
+		<classes>
+			<class
+				name="gov.acms.acmsproject.sample.SampleWebDriveManager" />
+		</classes>
+	</test>
+	
+ 	 
+</suite>
+ -->
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+    <test name="Usecase1">
+        <classes>
+            <class name="APp_Store.AddNewAppErrorMessages"/>
+        </classes>
+    </test>
+
+</suite>
